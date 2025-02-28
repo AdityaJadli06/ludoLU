@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f5f5;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+/* Board Layout */
+.board {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    background: white;
+    padding: 10px;
+    position: relative;
+    margin: auto;
+}
+
+/* Home Sections */
+.home {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-home { background: red; top: 0; left: 0; }
+.blue-home { background: blue; top: 0; right: 0; }
+.green-home { background: green; bottom: 0; right: 0; }
+.yellow-home { background: yellow; bottom: 0; left: 0; }
+
+/* Dice */
+.dice-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice {
+    font-size: 40px;
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dice.roll {
+    transform: rotate(360deg);
+}
+
+/* Ludo Path Grid */
+.path-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+
+/* Safe Zones */
+.safe {
+    background: lightgray;
+}
+
+/* Home Circles */
+.circle-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/* Home Lanes */
+.home-lane {
+    background-color: white;
+}
+
+.home-lane.red { background-color: #ff4d4d; }
+.home-lane.blue { background-color: #4d79ff; }
+.home-lane.green { background-color: #4dff4d; }
+.home-lane.yellow { background-color: #ffff4d; }
+
+/* Safe Zones */
+.safe {
+    background: lightgray;
+    border: 2px solid black;
+}
+
+.piece {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    border: 2px solid black;
+}
+
+.red-piece { background: red; }
+.blue-piece { background: blue; }
+.green-piece { background: green; }
+.yellow-piece { background: yellow; }

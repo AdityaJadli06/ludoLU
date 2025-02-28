@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ludo Game</h1>
+    <h2 id="turn-indicator">Current Turn: <span id="current-player" style="color: red;">Red</span></h2>
+
+    <div class="board">
+        <!-- Home Sections -->
+        <div class="home red-home">
+            <div class="circle-container">
+                <div class="circle"></div><div class="circle"></div>
+                <div class="circle"></div><div class="circle"></div>
+            </div>
+        </div>
+        <div class="home blue-home">
+            <div class="circle-container">
+                <div class="circle"></div><div class="circle"></div>
+                <div class="circle"></div><div class="circle"></div>
+            </div>
+        </div>
+        <div class="home green-home">
+            <div class="circle-container">
+                <div class="circle"></div><div class="circle"></div>
+                <div class="circle"></div><div class="circle"></div>
+            </div>
+        </div>
+        <div class="home yellow-home">
+            <div class="circle-container">
+                <div class="circle"></div><div class="circle"></div>
+                <div class="circle"></div><div class="circle"></div>
+            </div>
+        </div>
+
+
+        <!-- Dice -->
+        
+        <!-- Path Grid -->
+        <div class="path-grid"></div>
+        <div class="dice-container">
+            <div id="dice" class="dice">🎲</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
